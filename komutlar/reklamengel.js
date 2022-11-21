@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const db = require('quick.db')
 
 exports.run = async (client ,message, args) =>{
-  if (!message.guild.members.cache.get('440222721079508993')) return message.channel.send(`❌ Bu Komutu Kullana Bilmek İçin \`Mesajları Yönet\` Yetkisine Sahip Olmalısın!`)
+  if (!message.member.permissions.has("MANAGE_GUILD")) return message.channel.send(`❌ Bu Komutu Kullana Bilmek İçin \`Mesajları Yönet\` Yetkisine Sahip Olmalısın!`)
 if(args[0] === 'aç') {
     db.set(`${message.guild.id}.reklam`, true)
     message.channel.send(`Reklam Engel Başarılı Bir Şekilde Akif Edildi.`)

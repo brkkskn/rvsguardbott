@@ -3,7 +3,7 @@ const db = require('quick.db')
 const ayarlar = require('../ayarlar.json')
  
 exports.run = async(client, message, args) => {
-if(!message.guild.members.cache.get('440222721079508994')) return message.channel.send('Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın')
+if(!message.guild.members.cache.get('440222721079508993')) return message.channel.send('Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın')
 let prefix = ayarlar.prefix
 
   if (!args[0]) {
